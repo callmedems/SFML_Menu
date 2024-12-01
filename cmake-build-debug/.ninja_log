@@ -1,8 +1,11 @@
 # ninja log v6
-11	2180	7547898330141419	build.ninja	540d796e25a0388d
-20	7055	7542582990173386	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
-9199	10818	7542583081967373	proyecto_SFML.exe	f7ea87a704f82835
-33	9198	7542582990309292	CMakeFiles/proyecto_SFML.dir/searchAlgorithms/linearSearch.cpp.obj	cd50cbcb4c0071cd
-12	946	7547898330141419	build.ninja	540d796e25a0388d
 13	2060	7547898361835593	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
+6	542	7547919257721046	build.ninja	540d796e25a0388d
+9	593	7547902918686515	CMakeFiles/proyecto_SFML.dir/linearSearch.cpp.obj	fc53b521bba6c927
 2061	3592	7547898382313057	proyecto_SFML.exe	bbec498dae500c64
+33	9198	7542582990309292	CMakeFiles/proyecto_SFML.dir/searchAlgorithms/linearSearch.cpp.obj	cd50cbcb4c0071cd
+52	2022	7547902919114628	CMakeFiles/proyecto_SFML.dir/insertionsort.cpp.obj	dcf281e93beeacce
+65	1942	7547902919250537	CMakeFiles/proyecto_SFML.dir/quicksort.cpp.obj	ecec8692001207b2
+14	2024	7547902918737557	CMakeFiles/proyecto_SFML.dir/BubbleSort.cpp.obj	adf431a3dad2f873
+72	2033	7547902919318585	CMakeFiles/proyecto_SFML.dir/selectionsort.cpp.obj	8a50a649b45fec89
+58	2068	7547902919180518	CMakeFiles/proyecto_SFML.dir/mergesort.cpp.obj	72dfb14915299be

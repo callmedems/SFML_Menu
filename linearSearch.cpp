@@ -1,40 +1,62 @@
-//
-// Created by demmi on 11/24/2024.
-//
-// LinearSearchSFML.cpp
 #include "linearSearch.h"
-#include <SFML/Graphics.hpp>
-#include <thread> // For sleep
-#include <chrono> // For delays
+#include <thread>
+#include <chrono>
+#include <iostream>
 
-int linearSearch(const std::vector<int>& arr, int target, sf::RenderWindow& window, sf::Font& font) {
-    for (int i = 0; i < arr.size(); ++i) {
-        // Clear the window
-        window.clear(sf::Color::Black);
+using namespace std;
 
-        // Draw each element in the array as a bar
-        for (size_t j = 0; j < arr.size(); ++j) {
-            sf::RectangleShape bar(sf::Vector2f(50, -arr[j] * 5)); // Bar height scales with value
-            bar.setPosition(100 + j * 60, 400);                   // Adjust position
-            bar.setFillColor((j == i) ? sf::Color::Red : sf::Color::White); // Highlight current element
-            window.draw(bar);
+// Constructor
+LinearSearch::LinearSearch(RenderWindow& win, const std::vector<int>& arr, int tgt)
+    : window(win), array(arr), target(tgt), resultIndex(-1) {}
 
-            // Draw text showing the value
-            sf::Text valueText(std::to_string(arr[j]), font, 20);
-            valueText.setPosition(100 + j * 60, 410);
-            valueText.setFillColor(sf::Color::White);
-            window.draw(valueText);
+// Helper to draw the array
+void LinearSearch::drawArray(int currentIndex, int targetIndex) {
+    window.clear(Color::Black);
+
+    float barWidth = 50;
+    float barSpacing = 10;
+    float startX = (window.getSize().x - (barWidth + barSpacing) * array.size()) / 2;
+
+    for (size_t i = 0; i < array.size(); ++i) {
+        RectangleShape bar(Vector2f(barWidth, array[i] * 10));
+        bar.setPosition(startX + i * (barWidth + barSpacing), window.getSize().y - bar.getSize().y - 50);
+
+        if (i == targetIndex) {
+            bar.setFillColor(Color::Green); // Permanent highlight for found element
+        } else if (i == currentIndex) {
+            bar.setFillColor(Color::Red); // Temporary highlight for the current element
+        } else {
+            bar.setFillColor(Color::White); // Default color
         }
 
-        // Display the frame
-        window.display();
-        std::this_thread::sleep_for(std::chrono::milliseconds(500)); // Delay for visualization
+        window.draw(bar);
+    }
 
-        // Check if the current element matches the target
-        if (arr[i] == target) {
-            return i; // Return the index if found
+    window.display();
+}
+
+// Perform linear search with visualization
+void LinearSearch::search() {
+    for (size_t i = 0; i < array.size(); ++i) {
+        drawArray(i, -1);
+
+        // Simulate delay for animation
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+        if (array[i] == target) {
+            resultIndex = i;
+            drawArray(i, i);
+            break;
         }
     }
 
-    return -1; // Return -1 if the element is not found
+    // Final state: reset or highlight found element
+    if (resultIndex == -1) {
+        drawArray(-1, -1); // No match found
+    }
+}
+
+// Get the result index
+int LinearSearch::getResultIndex() const {
+    return resultIndex;
 }

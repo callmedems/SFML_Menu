@@ -12,8 +12,16 @@ find_package(SFML 2.6 COMPONENTS graphics window system REQUIRED)
 
 # Add your executable
 add_executable(proyecto_SFML main.cpp
-        searchAlgorithms/linearSearch.h
-        searchAlgorithms/linearSearch.cpp
+        linearSearch.cpp linearSearch.h
+        mainMENU.cpp
+        mainMENU.h
+        subMenu.cpp
+        subMenu.h
+        #BubbleSort.cpp
+        #insertionsort.cpp
+        #mergesort.cpp
+        #quicksort.cpp
+        #selectionsort.cpp
 )
 
 # Link SFML libraries
