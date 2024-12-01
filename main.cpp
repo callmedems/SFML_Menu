@@ -12,7 +12,7 @@ void drawMenu(sf::RenderWindow& window, const std::vector<std::string>& options,
     window.clear(sf::Color::Black);
 
     sf::Font font;
-    if (!font.loadFromFile("resources/Roboto-Regular.ttf")) {
+    if (!font.loadFromFile("assets/Roboto-Regular.ttf")) {
         std::cerr << "Error al cargar la fuente." << std::endl;
         return;
     }
@@ -73,7 +73,7 @@ void searchMenu(sf::RenderWindow& window) {
                         std::cin >> target;
 
                         sf::Font font;
-                        if (!font.loadFromFile("resources/Roboto-Regular.ttf")) {
+                        if (!font.loadFromFile("assets/Roboto-Regular.ttf")) {
                             std::cerr << "Error al cargar la fuente." << std::endl;
                             return;
                         }
