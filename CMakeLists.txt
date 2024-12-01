@@ -17,4 +17,4 @@ add_executable(proyecto_SFML main.cpp
 )
 
 # Link SFML libraries
-target_link_libraries(proyecto_SFML sfml-graphics sfml-window sfml-system)
+target_link_libraries(proyecto_SFML sfml-graphics sfml-window sfml-system sfml-audio)

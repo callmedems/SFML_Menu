@@ -1,5 +1,16 @@
 "D:\Apps\CLion\CLion 2024.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/Apps/CLion/CLion 2024.3/bin/ninja/win/x64/ninja.exe" -DSFML_DIR=C:/SFML-2.6.2/lib/cmake/SFML -G Ninja -S D:\demmi\Documents\CODING_CLION\proyecto_SFML -B D:\demmi\Documents\CODING_CLION\proyecto_SFML\cmake-build-debug
 -- Found SFML 2.6.2 in D:/SFML-2.6.2/lib/cmake/SFML
--- Configuring done (9.5s)
--- Generating done (1.7s)
--- Build files have been written to: D:/demmi/Documents/CODING_CLION/proyecto_SFML/cmake-build-debug
+-- Configuring done (1.3s)
+CMake Error:
+  Running
+
+   'D:/Apps/CLion/CLion 2024.3/bin/ninja/win/x64/ninja.exe' '-C' 'D:/demmi/Documents/CODING_CLION/proyecto_SFML/cmake-build-debug' '-t' 'restat' 'build.ninja'
+
+  failed with:
+
+   ninja: error: failed recompaction: Permission denied
+
+
+
+-- Generating done (0.4s)
+CMake Generate step failed.  Build files cannot be regenerated correctly.

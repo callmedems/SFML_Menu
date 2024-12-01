@@ -97,6 +97,11 @@
 			},
 			{
 				"backtrace" : 2,
+				"fragment" : "D:\\SFML-2.6.2\\lib\\libsfml-audio-d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
 				"fragment" : "D:\\SFML-2.6.2\\lib\\libsfml-system-d.a",
 				"role" : "libraries"
 			},
