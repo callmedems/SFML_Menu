@@ -12,7 +12,7 @@ find_package(SFML 2.6 COMPONENTS graphics window system REQUIRED)
 
 # Add your executable
 add_executable(proyecto_SFML main.cpp
-        linearSearch.cpp linearSearch.h
+        #linearSearch.cpp linearSearch.h
         mainMENU.cpp
         mainMENU.h
         subMenu.cpp

@@ -5,8 +5,8 @@ using namespace std;
 using namespace sf;
 
 MainMenu::MainMenu(RenderWindow& win) : window(win), selectedIndex(0) {
-    menuItems = {"Search Algorithms", "Sorting Algorithms", "Linear Structures",
-                 "Non Linear Structures", "Exit"};
+    menuItems = {"Algoritmos de Busqueda", "Algoritmos de Ordenamiento", "Estructuras Lineales",
+                 "Estructuras No Lineales", "Salir"};
 }
 
 void MainMenu::drawMenu() {
