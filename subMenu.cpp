@@ -11,7 +11,7 @@ void SubMenu::drawMenu() {
     window.clear(Color::Black);
 
     Font font;
-    if (!font.loadFromFile("arial.ttf")) {
+    if (!font.loadFromFile("assets/Roboto-Regular.ttf")) {
         cerr << "Error loading font\n";
         return;
     }
