@@ -1,0 +1,5 @@
+# ninja log v6
+11	2180	7544603282077036	build.ninja	540d796e25a0388d
+20	7055	7542582990173386	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
+9199	10818	7542583081967373	proyecto_SFML.exe	f7ea87a704f82835
+33	9198	7542582990309292	CMakeFiles/proyecto_SFML.dir/searchAlgorithms/linearSearch.cpp.obj	cd50cbcb4c0071cd

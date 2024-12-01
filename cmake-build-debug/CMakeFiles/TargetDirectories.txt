@@ -1,0 +1,3 @@
+D:/demmi/Documents/CODING_CLION/proyecto_SFML/cmake-build-debug/CMakeFiles/proyecto_SFML.dir
+D:/demmi/Documents/CODING_CLION/proyecto_SFML/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/demmi/Documents/CODING_CLION/proyecto_SFML/cmake-build-debug/CMakeFiles/rebuild_cache.dir
