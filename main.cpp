@@ -15,6 +15,7 @@
 #include "Queues.h"
 #include "linkedLists.h"
 #include "AVLtree.h"
+#include "dijkstraMaze.h"
 
 using namespace std;
 using namespace sf;
@@ -122,8 +123,24 @@ int main() {
                         avl.run(window);
                     } else if (subChoice == 1) {
                         // Dijkstra call
+                        DijkstraMaze maze(9);
+                        // creacion de nodos
+                        maze.addEdge(0, 1, 82.53);
+                        maze.addEdge(1, 2, 46.77);
+                        maze.addEdge(2, 3, 56.63);
+                        maze.addEdge(3, 4, 40.55);
+                        maze.addEdge(4, 5, 87.04);
+                        maze.addEdge(5, 6, 52.47);
+                        maze.addEdge(6, 7, 118.62);
+                        maze.addEdge(7, 8, 40.98);
+                        maze.addEdge(8, 0, 121.42);
+                        maze.addEdge(2, 5, 52.69);
+                        maze.addEdge(4, 7, 38.90);
+                        maze.run(window);
                     } else if (subChoice == 2) {
                         // DFS call
+                    } else if (subChoice == 3) {
+                        // BFS call
                     } else { // Regresar
                         break;
                     }
