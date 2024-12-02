@@ -13,6 +13,7 @@
 #include "quickSort.h"
 #include "stacks.h"
 #include "Queues.h"
+#include "linkedLists.h"
 
 using namespace std;
 using namespace sf;
@@ -101,6 +102,8 @@ int main() {
                         queue.run(window);
                     } else if (subChoice == 2) {
                         // Linked Lists call
+                        LinkedList linkedlist;
+                        linkedlist.run(window);
                     } else { // Regresar
                         break;
                     }

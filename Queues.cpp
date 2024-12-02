@@ -5,7 +5,7 @@
 
 void Queues::run(sf::RenderWindow &window) {
     bool running = true;
-    sf::Text instructions("Press 'E' to enqueue, 'D' to dequeue, 'Esc' to exit.", FontManager::font, 20);
+    sf::Text instructions("Presiona 'E' para enqueue, 'D' para dequeue, 'Esc' para salir.", FontManager::font, 20);
     instructions.setPosition(10, 10);
     instructions.setFillColor(sf::Color::White);
 
