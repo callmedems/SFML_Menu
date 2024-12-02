@@ -19,3 +19,6 @@
 311	11503	7548283225533772	CMakeFiles/proyecto_SFML.dir/insertionSort.cpp.obj	1d50b8f530f25ab9
 8	1930	7548296487758626	CMakeFiles/proyecto_SFML.dir/quickSort.cpp.obj	fe1917c18933f23e
 471	4888	7548303829224178	CMakeFiles/proyecto_SFML.dir/stacks.cpp.obj	b9d5abf7044257db
+28	5737	7548307087283900	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
+35	5822	7548307087408813	CMakeFiles/proyecto_SFML.dir/Queues.cpp.obj	6579fa265c1295f7
+5822	9017	7548307145278244	proyecto_SFML.exe	9110df93cef5193a
