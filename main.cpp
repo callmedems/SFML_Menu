@@ -10,6 +10,7 @@
 #include "insertionSort.h"
 #include "selectionSort.h"
 #include "mergeSort.h"
+#include "quickSort.h"
 
 using namespace std;
 using namespace sf;
@@ -75,6 +76,8 @@ int main() {
                         mergeSort.run(window);
                     } else if (subChoice == 4) {
                         // Quick Sort call
+                        QuickSort quickSort;
+                        quickSort.run(window);
                     } else { // Regresar
                         break;
                     }

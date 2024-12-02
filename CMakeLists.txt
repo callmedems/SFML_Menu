@@ -29,13 +29,8 @@ add_executable(proyecto_SFML main.cpp
         insertionSort.h
         mergeSort.cpp
         mergeSort.h
-        #searchAlgorithms.cpp
-        #searchAlgorithms.h
-        #BubbleSort.cpp
-        #insertionsort.cpp
-        #mergesort.cpp
-        #quicksort.cpp
-        #selectionsort.cpp
+        quickSort.cpp
+        quickSort.h
 )
 
 # Link SFML libraries
