@@ -41,6 +41,8 @@ add_executable(proyecto_SFML main.cpp
         AVLtree.h
         dijsktraMaze.cpp
         dijkstraMaze.h
+        grafos.cpp
+        grafos.h
 )
 
 # Link SFML libraries

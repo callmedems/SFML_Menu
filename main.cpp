@@ -16,6 +16,7 @@
 #include "linkedLists.h"
 #include "AVLtree.h"
 #include "dijkstraMaze.h"
+#include "grafos.h"
 
 using namespace std;
 using namespace sf;
@@ -114,7 +115,7 @@ int main() {
 
                 case 3: {
                     // Submenu for non-linear data structures
-                    SubMenu nonLinearStructMenu(window, {"Arboles AVL", "Dijkstra", "DFS", "BFS", "Regresar"});
+                    SubMenu nonLinearStructMenu(window, {"Arboles AVL", "Dijkstra", "DFS/BFS", "Regresar"});
                     subChoice = nonLinearStructMenu.show();
 
                     if (subChoice == 0) {
@@ -138,9 +139,12 @@ int main() {
                         maze.addEdge(4, 7, 38.90);
                         maze.run(window);
                     } else if (subChoice == 2) {
-                        // DFS call
-                    } else if (subChoice == 3) {
-                        // BFS call
+                        // DFS/BFS call
+                        cout << "Interacción: " <<
+                        "Clic izquierdo: Ejecuta DFS desde el nodo seleccionado." <<
+                        "Clic derecho: Ejecuta BFS desde el nodo seleccionado.";
+                        Grafos grafo(9);
+                        grafo.run(window);
                     } else { // Regresar
                         break;
                     }

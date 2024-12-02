@@ -1,9 +1,9 @@
 # ninja log v6
 232	12020	7548353293411232	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
-19	4000	7548365647069924	build.ninja	540d796e25a0388d
+19	4000	7548369314191279	build.ninja	540d796e25a0388d
 57	5210	7548246301176511	CMakeFiles/proyecto_SFML.dir/linearSearch.cpp.obj	fc53b521bba6c927
-12	2224	7548365284059428	CMakeFiles/proyecto_SFML.dir/dijsktraMaze.cpp.obj	c70c450895827525
-2225	2991	7548365306189863	proyecto_SFML.exe	b0b58953a9c5f9fc
+11	2146	7548366589744089	CMakeFiles/proyecto_SFML.dir/dijsktraMaze.cpp.obj	c70c450895827525
+2147	3114	7548366611107792	proyecto_SFML.exe	b0b58953a9c5f9fc
 1011	7284	7548313018170136	CMakeFiles/proyecto_SFML.dir/Queues.cpp.obj	6579fa265c1295f7
 33	9198	7542582990309292	CMakeFiles/proyecto_SFML.dir/searchAlgorithms/linearSearch.cpp.obj	cd50cbcb4c0071cd
 52	2022	7547902919114628	CMakeFiles/proyecto_SFML.dir/insertionsort.cpp.obj	dcf281e93beeacce
@@ -23,9 +23,7 @@
 471	4888	7548303829224178	CMakeFiles/proyecto_SFML.dir/stacks.cpp.obj	b9d5abf7044257db
 841	7312	7548330601024459	CMakeFiles/proyecto_SFML.dir/linkedLists.cpp.obj	c575703178f771a3
 16	9078	7548336141857544	CMakeFiles/proyecto_SFML.dir/AVLtree.cpp.obj	f444955a5fdf7964
-12	2305	7548365789650469	CMakeFiles/proyecto_SFML.dir/dijsktraMaze.cpp.obj	c70c450895827525
-2305	3286	7548365812581499	proyecto_SFML.exe	b0b58953a9c5f9fc
-11	2361	7548366198060621	CMakeFiles/proyecto_SFML.dir/dijsktraMaze.cpp.obj	c70c450895827525
-2361	3389	7548366221559670	proyecto_SFML.exe	b0b58953a9c5f9fc
-11	2146	7548366589744089	CMakeFiles/proyecto_SFML.dir/dijsktraMaze.cpp.obj	c70c450895827525
-2147	3114	7548366611107792	proyecto_SFML.exe	b0b58953a9c5f9fc
+25	4142	7548371268882851	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
+13	2367	7548371672194626	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
+11	3751	7548373186142833	CMakeFiles/proyecto_SFML.dir/grafos.cpp.obj	fba95a92453a7924
+3752	6797	7548373223550432	proyecto_SFML.exe	5a72a3905381eaf3
