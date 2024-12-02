@@ -1,10 +1,10 @@
 # ninja log v6
 57	5210	7548246301176511	CMakeFiles/proyecto_SFML.dir/linearSearch.cpp.obj	fc53b521bba6c927
-5	389	7548309407824657	build.ninja	540d796e25a0388d
-28	5737	7548307087283900	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
-5822	9017	7548307145278244	proyecto_SFML.exe	9110df93cef5193a
+5	389	7548326882205362	build.ninja	540d796e25a0388d
+922	7101	7548313017266465	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
+1623	2536	7548322418732433	proyecto_SFML.exe	68ad909135fac5bc
 52	2022	7547902919114628	CMakeFiles/proyecto_SFML.dir/insertionsort.cpp.obj	dcf281e93beeacce
-35	5822	7548307087408813	CMakeFiles/proyecto_SFML.dir/Queues.cpp.obj	6579fa265c1295f7
+1011	7284	7548313018170136	CMakeFiles/proyecto_SFML.dir/Queues.cpp.obj	6579fa265c1295f7
 33	9198	7542582990309292	CMakeFiles/proyecto_SFML.dir/searchAlgorithms/linearSearch.cpp.obj	cd50cbcb4c0071cd
 65	1942	7547902919250537	CMakeFiles/proyecto_SFML.dir/quicksort.cpp.obj	ecec8692001207b2
 14	2024	7547902918737557	CMakeFiles/proyecto_SFML.dir/BubbleSort.cpp.obj	adf431a3dad2f873
@@ -20,9 +20,10 @@
 311	11503	7548283225533772	CMakeFiles/proyecto_SFML.dir/insertionSort.cpp.obj	1d50b8f530f25ab9
 8	1930	7548296487758626	CMakeFiles/proyecto_SFML.dir/quickSort.cpp.obj	fe1917c18933f23e
 471	4888	7548303829224178	CMakeFiles/proyecto_SFML.dir/stacks.cpp.obj	b9d5abf7044257db
-922	7101	7548313017266465	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
-1011	7284	7548313018170136	CMakeFiles/proyecto_SFML.dir/Queues.cpp.obj	6579fa265c1295f7
-578	13596	7548318759054921	CMakeFiles/proyecto_SFML.dir/linkedLists.cpp.obj	c575703178f771a3
-13597	23158	7548318889240347	proyecto_SFML.exe	68ad909135fac5bc
 17	1622	7548322402680001	CMakeFiles/proyecto_SFML.dir/linkedLists.cpp.obj	c575703178f771a3
-1623	2536	7548322418732433	proyecto_SFML.exe	68ad909135fac5bc
+841	7312	7548330601024459	CMakeFiles/proyecto_SFML.dir/linkedLists.cpp.obj	c575703178f771a3
+11	3500	7548332837380197	CMakeFiles/proyecto_SFML.dir/AVLtree.cpp.obj	f444955a5fdf7964
+10	4018	7548333310176167	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
+16	9078	7548336141857544	CMakeFiles/proyecto_SFML.dir/AVLtree.cpp.obj	f444955a5fdf7964
+10	9080	7548336141793429	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
+9081	11539	7548336232504890	proyecto_SFML.exe	8b483908c3e640ee

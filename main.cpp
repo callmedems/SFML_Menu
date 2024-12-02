@@ -14,6 +14,7 @@
 #include "stacks.h"
 #include "Queues.h"
 #include "linkedLists.h"
+#include "AVLtree.h"
 
 using namespace std;
 using namespace sf;
@@ -117,6 +118,8 @@ int main() {
 
                     if (subChoice == 0) {
                         // AVL Trees call
+                        AVLTree avl;
+                        avl.run(window);
                     } else if (subChoice == 1) {
                         // Dijkstra call
                     } else if (subChoice == 2) {

@@ -37,6 +37,8 @@ add_executable(proyecto_SFML main.cpp
         Queues.h
         linkedLists.cpp
         linkedLists.h
+        AVLtree.cpp
+        AVLtree.h
 )
 
 # Link SFML libraries
