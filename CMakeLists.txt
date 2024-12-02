@@ -21,6 +21,12 @@ add_executable(proyecto_SFML main.cpp
         fontManager.cpp
         binarySearch.cpp
         binarySearch.h
+        bubbleSort.cpp
+        bubbleSort.h
+        selectionSort.cpp
+        selectionSort.h
+        insertionSort.cpp
+        insertionSort.h
         #searchAlgorithms.cpp
         #searchAlgorithms.h
         #BubbleSort.cpp

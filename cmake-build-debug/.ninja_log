@@ -1,8 +1,8 @@
 # ninja log v6
-13	2072	7548217157046131	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
-170	9784	7548242143463690	build.ninja	540d796e25a0388d
-12	1943	7548241198146265	CMakeFiles/proyecto_SFML.dir/linearSearch.cpp.obj	fc53b521bba6c927
-1944	2355	7548241217475884	proyecto_SFML.exe	569d147a45c8e340
+22	4669	7548258930430327	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
+170	9784	7548263231243115	build.ninja	540d796e25a0388d
+57	5210	7548246301176511	CMakeFiles/proyecto_SFML.dir/linearSearch.cpp.obj	fc53b521bba6c927
+4669	5925	7548258976900741	proyecto_SFML.exe	9da7512190b1118a
 33	9198	7542582990309292	CMakeFiles/proyecto_SFML.dir/searchAlgorithms/linearSearch.cpp.obj	cd50cbcb4c0071cd
 52	2022	7547902919114628	CMakeFiles/proyecto_SFML.dir/insertionsort.cpp.obj	dcf281e93beeacce
 65	1942	7547902919250537	CMakeFiles/proyecto_SFML.dir/quicksort.cpp.obj	ecec8692001207b2
@@ -12,12 +12,6 @@
 34	6610	7548208297178843	CMakeFiles/proyecto_SFML.dir/subMenu.cpp.obj	e9b3e571392aa587
 16	6499	7548208296862580	CMakeFiles/proyecto_SFML.dir/mainMENU.cpp.obj	1639a52a2bf3103e
 47	6665	7548208297305162	CMakeFiles/proyecto_SFML.dir/fontManager.cpp.obj	be85cbda74f95129
-57	5210	7548246301176511	CMakeFiles/proyecto_SFML.dir/linearSearch.cpp.obj	fc53b521bba6c927
-8	5302	7548246300683378	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
-11	2019	7548246997506474	CMakeFiles/proyecto_SFML.dir/main.cpp.obj	8a99457f73a3af13
-22	3974	7548247160838742	CMakeFiles/proyecto_SFML.dir/binarySearch.cpp.obj	deef597339e0f606
-3975	5262	7548247200370412	proyecto_SFML.exe	69b6b0befbed9dd3
-32	1997	7548248603630033	CMakeFiles/proyecto_SFML.dir/binarySearch.cpp.obj	deef597339e0f606
-1998	2396	7548248623292001	proyecto_SFML.exe	69b6b0befbed9dd3
-23	1892	7548249296451580	CMakeFiles/proyecto_SFML.dir/binarySearch.cpp.obj	deef597339e0f606
-1893	2300	7548249315133785	proyecto_SFML.exe	69b6b0befbed9dd3
+71	3132	7548253576554448	CMakeFiles/proyecto_SFML.dir/binarySearch.cpp.obj	deef597339e0f606
+66	4661	7548258930869097	CMakeFiles/proyecto_SFML.dir/bubbleSort.cpp.obj	b55b2704276cf069
+79	4663	7548258931003520	CMakeFiles/proyecto_SFML.dir/selectionSort.cpp.obj	2331026de914cdba

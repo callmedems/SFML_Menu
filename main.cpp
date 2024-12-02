@@ -6,6 +6,8 @@
 #include "subMenu.h"
 #include "linearSearch.h"
 #include "binarySearch.h"
+#include "bubbleSort.h"
+#include "selectionSort.h"
 
 using namespace std;
 using namespace sf;
@@ -14,7 +16,7 @@ int main() {
     int choice, subChoice;
     RenderWindow window(VideoMode(800, 800), "MENU PRINCIPAL");
 
-    // Cargar la fuente
+    // cargar la fuente
     if (!FontManager::loadFont("assets/Roboto-Regular.ttf")) {
         return 1;  // Salir si no se pudo cargar la fuente
     }
@@ -49,13 +51,18 @@ int main() {
 
                 case 1: {
                     // Submenu for sorting algorithms
-                    SubMenu sortingMenu(window, {"Bubble Sort", "Selection Sort", "Insertion Sort", "Merge Sort", "Quick Sort", "Regresar"});
+                    SubMenu sortingMenu(window, {"Bubble Sort", "Selection Sort",
+                        "Insertion Sort", "Merge Sort", "Quick Sort", "Regresar"});
                     subChoice = sortingMenu.show();
 
                     if (subChoice == 0) {
                         // Bubble Sort call
+                        BubbleSort bubbleSort;
+                        bubbleSort.run(window);
                     } else if (subChoice == 1) {
                         // Selection Sort call
+                        SelectionSort selectionSort;
+                        selectionSort.run(window);
                     } else if (subChoice == 2) {
                         // Insertion Sort call
                     } else if (subChoice == 3) {
