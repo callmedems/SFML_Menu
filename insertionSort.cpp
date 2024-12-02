@@ -9,7 +9,7 @@ using namespace sf;
 
 void InsertionSort::run(RenderWindow &window) {
     int n;
-    cout << "Introduce el tamaño del arreglo: ";
+    cout << "Numero de elementos del array: ";
     cin >> n;
 
     // Inicializamos el arreglo con el tamaño especificado
@@ -22,7 +22,7 @@ void InsertionSort::run(RenderWindow &window) {
         cin >> arr[i];
     }
 
-    cout << "Array original: ";
+    cout << "El array es: ";
     for (int num : arr) {
         cout << num << " ";
     }
@@ -43,7 +43,7 @@ void InsertionSort::run(RenderWindow &window) {
     sortText.setFillColor(Color::White);
 
     // Text to show array on screen
-    Text arrayText("El arreglo es: ", FontManager::font, 20);
+    Text arrayText("El array es: ", FontManager::font, 20);
     arrayText.setPosition(10, 40);
     arrayText.setFillColor(Color::White);
 
@@ -106,7 +106,7 @@ void InsertionSort::run(RenderWindow &window) {
     cout << endl;
 
     // Visualize the sorted array with a final delay
-    sortText.setString("Ordenamiento completado!");
+    sortText.setString("Ordenamiento completado");
     window.clear();
     window.draw(arrayText);
     window.draw(arrayValues);
@@ -118,5 +118,5 @@ void InsertionSort::run(RenderWindow &window) {
     }
 
     window.display();
-    sf::sleep(sf::seconds(2)); // Pause to show the final sorted array
+    sf::sleep(sf::seconds(5)); // Pause to show the final sorted array
 }

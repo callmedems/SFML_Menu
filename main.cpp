@@ -7,14 +7,16 @@
 #include "linearSearch.h"
 #include "binarySearch.h"
 #include "bubbleSort.h"
+#include "insertionSort.h"
 #include "selectionSort.h"
+#include "mergeSort.h"
 
 using namespace std;
 using namespace sf;
 
 int main() {
     int choice, subChoice;
-    RenderWindow window(VideoMode(800, 800), "MENU PRINCIPAL");
+    RenderWindow window(VideoMode(800, 600), "MENU PRINCIPAL");
 
     // cargar la fuente
     if (!FontManager::loadFont("assets/Roboto-Regular.ttf")) {
@@ -65,8 +67,12 @@ int main() {
                         selectionSort.run(window);
                     } else if (subChoice == 2) {
                         // Insertion Sort call
+                        InsertionSort insertionSort;
+                        insertionSort.run(window);
                     } else if (subChoice == 3) {
                         // Merge Sort call
+                        MergeSort mergeSort;
+                        mergeSort.run(window);
                     } else if (subChoice == 4) {
                         // Quick Sort call
                     } else { // Regresar

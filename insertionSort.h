@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
-class insertionSort {
+class InsertionSort {
 public:
     void run(sf::RenderWindow &window);
 
