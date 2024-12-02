@@ -31,6 +31,10 @@ add_executable(proyecto_SFML main.cpp
         mergeSort.h
         quickSort.cpp
         quickSort.h
+        stacks.cpp
+        stacks.h
+        Queues.cpp
+        Queues.h
 )
 
 # Link SFML libraries

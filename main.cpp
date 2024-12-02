@@ -11,6 +11,8 @@
 #include "selectionSort.h"
 #include "mergeSort.h"
 #include "quickSort.h"
+#include "stacks.h"
+#include "Queues.h"
 
 using namespace std;
 using namespace sf;
@@ -91,8 +93,12 @@ int main() {
 
                     if (subChoice == 0) {
                         // Stacks call
+                        Stacks stack;
+                        stack.run(window);
                     } else if (subChoice == 1) {
                         // Queues call
+                        Queues queue;
+                        queue.run(window);
                     } else if (subChoice == 2) {
                         // Linked Lists call
                     } else { // Regresar
