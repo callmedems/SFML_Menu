@@ -5,8 +5,8 @@
 #include <vector>
 #include <string>
 
-using namespace sf;
 using namespace std;
+using namespace sf;
 
 class SubMenu {
 protected:

@@ -17,6 +17,8 @@ add_executable(proyecto_SFML main.cpp
         mainMENU.h
         subMenu.cpp
         subMenu.h
+        #searchAlgorithms.cpp
+        #searchAlgorithms.h
         #BubbleSort.cpp
         #insertionsort.cpp
         #mergesort.cpp

@@ -1,4 +1,4 @@
-#include "SubMenu.h"
+#include "subMenu.h"
 #include <iostream>
 
 using namespace std;
@@ -42,7 +42,7 @@ void SubMenu::show() {
                 } else if (event.key.code == Keyboard::Down) {
                     selectedIndex = (selectedIndex + 1) % menuItems.size();
                 } else if (event.key.code == Keyboard::Enter) {
-                    if (menuItems[selectedIndex] == "Back") {
+                    if (menuItems[selectedIndex] == "Regresar") {
                         return; // Exit submenu
                     } else {
                         cout << "Selected: " << menuItems[selectedIndex] << endl;

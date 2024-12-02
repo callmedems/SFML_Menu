@@ -2,11 +2,11 @@
 #include <iostream>
 
 using namespace std;
-using namespace sf;
+using namespace sf; 
 
 MainMenu::MainMenu(RenderWindow& win) : window(win), selectedIndex(0) {
-    menuItems = {"Algoritmos de Busqueda", "Algoritmos de Ordenamiento", "Estructuras Lineales",
-                 "Estructuras No Lineales", "Salir"};
+    menuItems = {"Algoritmos de Busqueda", "Algoritmos de Ordenamietno", "Estructuras Lineales",
+                 "Estructuras no Lineales", "Salir"};
 }
 
 void MainMenu::drawMenu() {

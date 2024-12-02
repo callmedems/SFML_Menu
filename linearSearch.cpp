@@ -1,62 +1,50 @@
 #include "linearSearch.h"
-#include <thread>
-#include <chrono>
 #include <iostream>
 
 using namespace std;
+using namespace sf;
 
-// Constructor
-LinearSearch::LinearSearch(RenderWindow& win, const std::vector<int>& arr, int tgt)
-    : window(win), array(arr), target(tgt), resultIndex(-1) {}
+linearSearch::linearSearch(RenderWindow& window) : window(window) {
+    // Example array, you can modify this as needed or get input from the user
+    array = { 3, 5, 7, 9, 10, 12, 14, 16, 18, 20 };
+    target = -1; // Initially no target set
+}
 
-// Helper to draw the array
-void LinearSearch::drawArray(int currentIndex, int targetIndex) {
-    window.clear(Color::Black);
+void linearSearch::setTarget(int target) {
+    this->target = target;  // Set the value to search for
+}
 
-    float barWidth = 50;
-    float barSpacing = 10;
-    float startX = (window.getSize().x - (barWidth + barSpacing) * array.size()) / 2;
-
+void linearSearch::visualizeSearch() {
+    // Example visualization of linear search with real-time animation
+    RectangleShape rect(Vector2f(40.f, 40.f));
+    rect.setFillColor(Color::Green);
+    rect.setPosition(100.f, 100.f);
+    
     for (size_t i = 0; i < array.size(); ++i) {
-        RectangleShape bar(Vector2f(barWidth, array[i] * 10));
-        bar.setPosition(startX + i * (barWidth + barSpacing), window.getSize().y - bar.getSize().y - 50);
-
-        if (i == targetIndex) {
-            bar.setFillColor(Color::Green); // Permanent highlight for found element
-        } else if (i == currentIndex) {
-            bar.setFillColor(Color::Red); // Temporary highlight for the current element
+        rect.setPosition(100.f + i * 50.f, 100.f);
+        
+        // Visualize each element being visited
+        if (array[i] == target) {
+            rect.setFillColor(Color::Red);  // Highlight found element
         } else {
-            bar.setFillColor(Color::White); // Default color
+            rect.setFillColor(Color::Blue);  // Other elements are blue
         }
 
-        window.draw(bar);
+        window.clear();
+        window.draw(rect);
+        window.display();
+
+        // Simulate delay to show each step
+        sleep(seconds(0.5f));
+    }
+
+    // Final display when search is done
+    window.clear();
+    for (size_t i = 0; i < array.size(); ++i) {
+        rect.setPosition(100.f + i * 50.f, 100.f);
+        rect.setFillColor(Color::Blue);
+        window.draw(rect);
     }
 
     window.display();
-}
-
-// Perform linear search with visualization
-void LinearSearch::search() {
-    for (size_t i = 0; i < array.size(); ++i) {
-        drawArray(i, -1);
-
-        // Simulate delay for animation
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
-
-        if (array[i] == target) {
-            resultIndex = i;
-            drawArray(i, i);
-            break;
-        }
-    }
-
-    // Final state: reset or highlight found element
-    if (resultIndex == -1) {
-        drawArray(-1, -1); // No match found
-    }
-}
-
-// Get the result index
-int LinearSearch::getResultIndex() const {
-    return resultIndex;
 }
