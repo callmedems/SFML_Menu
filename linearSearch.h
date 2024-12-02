@@ -3,23 +3,34 @@
 
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include <string>
 
-using namespace sf;
 using namespace std;
+using namespace sf;
 
-class linearSearch {
-public:
-    linearSearch(RenderWindow& window);
-    void setTarget(int target);
-    void visualizeSearch();  // This will animate the search process
-    void search(const vector<int>& arr);
-
+class LinearSearch {
 private:
-    RenderWindow& window;
+    returnVector<int> array;
     int target;
-    vector<int> array;
-    Font font;
-    Text text;
+    bool found;
+    size_t currentIndex;
+    returnRenderWindow& window;
+    returnFont font;
+    returnText statusText;
+
+public:
+    LinearSearch(returnRenderWindow& win);
+
+    void setTarget(int t);
+    void setArray(const returnVector<int>& arr);
+    void search();
+    void render();
+
+    bool isFound() const;
+    bool isSearching() const;
+
+    void displayMessage(const returnString& message);
+    void handleTextInput(returnEvent event);
 };
 
-#endif //LINEARSEARCH_H
+#endif // LINEARSEARCH_H

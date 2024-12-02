@@ -2,8 +2,11 @@
 #include "mainMenu.h"
 #include "subMenu.h"
 
+using namespace std;
+using namespace sf;
+
 int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "MENU PRINCIPAL");
+    RenderWindow window(VideoMode(800, 600), "MENU PRINCIPAL");
 
     while (window.isOpen()) {
         MainMenu mainMenu(window);
@@ -13,22 +16,36 @@ int main() {
             // Exit chosen
             window.close();
         } else {
-            // Submenu categories
-            if (choice == 0) {
-                SubMenu searchMenu(window, {"Secuencial", "Busqueda Binaria", "Regresar"});
-                searchMenu.show();
-            } else if (choice == 1) {
-                SubMenu sortingMenu(window, {"Bubble Sort", "Selection Sort",
-                    "Insertion Sort", "Merge Sort", "Quick Sort", "Regresar"});
-                sortingMenu.show();
-            } else if (choice == 2) {
-                SubMenu linearStructMenu(window, {"Stacks", "Queues",
-                    "Linked Lists", "Regresar"});
-                linearStructMenu.show();
-            } else if (choice == 3) {
-                SubMenu nonLinearStructMenu(window, {"Arboles AVL", "Dijkstra",
-                    "DFS", "BFS", "Regresar"});
-                nonLinearStructMenu.show();
+            switch (choice) {
+                case 0: {
+                    // Submenu for search algorithms
+                    SubMenu searchMenu(window, {"Secuencial", "Busqueda Binaria", "Regresar"});
+                    searchMenu.show();
+                    break;
+                }
+                case 1: {
+                    // Submenu for sorting algorithms
+                    SubMenu sortingMenu(window, {"Bubble Sort", "Selection Sort",
+                        "Insertion Sort", "Merge Sort", "Quick Sort", "Regresar"});
+                    sortingMenu.show();
+                    break;
+                }
+                case 2: {
+                    // Submenu for linear data structures
+                    SubMenu linearStructMenu(window, {"Stacks", "Queues",
+                        "Linked Lists", "Regresar"});
+                    linearStructMenu.show();
+                    break;
+                }
+                case 3: {
+                    // Submenu for non-linear data structures
+                    SubMenu nonLinearStructMenu(window, {"Arboles AVL", "Dijkstra",
+                        "DFS", "BFS", "Regresar"});
+                    nonLinearStructMenu.show();
+                    break;
+                }
+                default:
+                    break;
             }
         }
     }
