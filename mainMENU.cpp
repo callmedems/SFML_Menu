@@ -1,4 +1,5 @@
 #include "mainMenu.h"
+#include "fontManager.h"
 #include <iostream>
 
 using namespace std;
@@ -10,16 +11,11 @@ MainMenu::MainMenu(RenderWindow& win) : window(win), selectedIndex(0) {
 }
 
 void MainMenu::drawMenu() {
+
     window.clear(Color::Black);
 
-    Font font;
-    if (!font.loadFromFile("assets/Roboto-Regular.ttf")) {
-        cerr << "Error loading font\n";
-        return;
-    }
-
     for (size_t i = 0; i < menuItems.size(); ++i) {
-        Text text(menuItems[i], font, 30);
+        Text text(menuItems[i], FontManager::font, 30);
         text.setPosition(100, 100 + i * 50);
         text.setFillColor(i == selectedIndex ? Color::Red : Color::White);
         window.draw(text);

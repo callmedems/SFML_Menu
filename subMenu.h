@@ -19,7 +19,9 @@ protected:
 public:
     SubMenu(RenderWindow& win, const vector<string>& items);
 
-    virtual void show(); // Display the submenu (virtual for extension)
+    // display the submenu (virtual for extension)
+    // int type to get selectedIndex in return
+    virtual int show();
 };
 
 #endif // SUBMENU_H

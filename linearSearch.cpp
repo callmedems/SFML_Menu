@@ -1,91 +1,114 @@
-#include "LinearSearch.h"
+// linearSearch.cpp
+#include "linearSearch.h"
+#include "fontManager.h"
 #include <iostream>
+#include <string>
+#include <sstream>
 
-LinearSearch::LinearSearch(sf::RenderWindow& win)
-    : window(win), target(-1), found(false), currentIndex(0) {
-    if (!font.loadFromFile("arial.ttf")) {
-        std::cout << "Error loading font!" << std::endl;
+using namespace std;
+using namespace sf;
+
+void LinearSearch::run(RenderWindow &window) {
+    vector<int> arr = {10, 20, 30, 40, 50}; // Array ejemplo
+    cout << "Este es el array: ";
+    for (int i = 0; i < arr.size(); i++) {
+        cout << arr[i] << " ";
     }
-    statusText.setFont(font);
-    statusText.setCharacterSize(20);
-    statusText.setFillColor(sf::Color::White);
-    statusText.setPosition(10.f, 10.f);
-}
+    cout << endl;
 
-void LinearSearch::setTarget(int t) {
-    target = t;
-    found = false;
-    currentIndex = 0;
-}
+    int target;
+    cout << "Introduce el numero a buscar: ";
+    cin >> target;
 
-void LinearSearch::setArray(const std::vector<int>& arr) {
-    array = arr;
-}
+    // Crear un array de "rectángulos" que representan los elementos
+    vector<RectangleShape> bars;
+    float barWidth = 50.0f;
+    float gap = 10.0f;
+    for (int i = 0; i < arr.size(); ++i) { // Ahora empieza desde 0
+        RectangleShape bar(Vector2f(barWidth, arr[i] * 10)); // La altura está basada en el valor del arreglo
+        bar.setPosition(100 + i * (barWidth + gap), 500 - bar.getSize().y); // Posicionamiento
+        bars.push_back(bar);
+    }
 
-void LinearSearch::search() {
-    if (currentIndex < array.size()) {
-        if (array[currentIndex] == target) {
-            found = true;
-        } else {
-            currentIndex++;
+    Text searchText("Buscando...", FontManager::font, 20);
+    searchText.setPosition(10, 10);
+    searchText.setFillColor(Color::White);
+
+    // Crear el texto para mostrar el arreglo en pantalla
+    Text arrayText("El arreglo es: ", FontManager::font, 20);
+    arrayText.setPosition(10, 40);
+    arrayText.setFillColor(Color::White);
+
+    // texto con elementos del array
+    stringstream ss;
+    for (int i = 0; i < arr.size(); ++i) {
+        ss << arr[i] << " ";
+    }
+
+    Text arrayValues(ss.str(), FontManager::font, 20);
+    arrayValues.setPosition(100, 100);
+    arrayValues.setFillColor(Color::White);
+
+    int currentIndex = 0;
+    bool found = false;
+    string resultMessage = "Buscando...";
+
+    while (window.isOpen()) {
+        Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == Event::Closed)
+                window.close();
         }
-    }
-}
 
-void LinearSearch::render() {
-    window.clear();
+        window.clear();
 
-    float width = window.getSize().x / array.size();
-    float height = window.getSize().y - 100.f;
+        // mostramos arreglo en pantalla:
+        window.draw(arrayText);
+        window.draw(arrayValues);
 
-    for (size_t i = 0; i < array.size(); ++i) {
-        sf::RectangleShape rect(sf::Vector2f(width - 5, height - 50));
-        rect.setPosition(i * width, 50);
+        searchText.setString(resultMessage);
+        window.draw(searchText);
 
-        if (i == currentIndex) {
-            rect.setFillColor(sf::Color::Green); // Highlight current element
-        } else if (found && array[i] == target) {
-            rect.setFillColor(sf::Color::Red); // Permanently highlight the found element
-        } else {
-            rect.setFillColor(sf::Color::Blue); // Default color
-        }
-        window.draw(rect);
-
-        // Display the value
-        sf::Text text(std::to_string(array[i]), font, 20);
-        text.setPosition(i * width + 10, height - 40);
-        text.setFillColor(sf::Color::White);
-        window.draw(text);
-    }
-
-    // Display status message
-    window.draw(statusText);
-
-    window.display();
-}
-
-bool LinearSearch::isFound() const {
-    return found;
-}
-
-bool LinearSearch::isSearching() const {
-    return !found && currentIndex < array.size();
-}
-
-void LinearSearch::displayMessage(const std::string& message) {
-    statusText.setString(message);
-}
-
-void LinearSearch::handleTextInput(sf::Event event) {
-    if (event.type == sf::Event::TextEntered) {
-        if (event.text.unicode == 8) { // Backspace key
-            if (!statusText.getString().isEmpty()) {
-                std::string str = statusText.getString();
-                str.pop_back();
-                statusText.setString(str);
+        // Actualizar la visualización en cada paso del algoritmo
+        for (int i = 0; i < bars.size(); ++i) {
+            if (i == currentIndex) {
+                bars[i].setFillColor(Color::Red); // Resaltar el elemento actual
+            } else {
+                bars[i].setFillColor(Color::Green); // Elementos no visitados
             }
-        } else if (event.text.unicode < 128) {
-            statusText.setString(statusText.getString() + static_cast<char>(event.text.unicode));
+            window.draw(bars[i]);
         }
+
+        window.display();
+
+        // Algoritmo de búsqueda lineal
+        if (currentIndex < arr.size()) {
+            if (arr[currentIndex] == target) {
+                found = true;
+                cout << "Elemento encontrado en el indice: " << currentIndex+1 << endl; // Mostrar en consola
+            } else {
+                currentIndex++;
+            }
+        }
+
+        if (found) {
+            // Esperar un poco para mostrar el resultado antes de regresar al menú
+            sf::sleep(sf::seconds(2)); // Pausar 2 segundos para visualizar el mensaje
+            break; // Si se encuentra el elemento, termina el ciclo
+        }
+
+        // Pausar un poco para la visualización
+        sf::sleep(sf::milliseconds(500));
+    }
+
+    if (!found) {
+        resultMessage = "Elemento no encontrado";
+        window.clear();
+        window.draw(arrayText);
+        window.draw(arrayValues);
+        window.draw(searchText);
+        window.display();
+        cout << "Elemento no encontrado." << endl; // Mostrar en consola
+        sf::sleep(sf::seconds(2)); // Pausar para que se vea el mensaje
     }
 }

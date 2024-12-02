@@ -12,11 +12,15 @@ find_package(SFML 2.6 COMPONENTS graphics window system REQUIRED)
 
 # Add your executable
 add_executable(proyecto_SFML main.cpp
-        #linearSearch.cpp linearSearch.h
         mainMENU.cpp
         mainMENU.h
         subMenu.cpp
         subMenu.h
+        linearSearch.h linearSearch.cpp
+        fontManager.h
+        fontManager.cpp
+        binarySearch.cpp
+        binarySearch.h
         #searchAlgorithms.cpp
         #searchAlgorithms.h
         #BubbleSort.cpp
